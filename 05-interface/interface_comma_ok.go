@@ -48,4 +48,18 @@ func main() {
 			fmt.Println("list[%d] is of a different type", index)
 		}
 	}
+
+	for index, element := range list {
+                switch element.(type) {
+                case int:
+                        fmt.Printf("list[%d] is an int and its value is\n", index)
+                case string:
+                        fmt.Printf("list[%d] is a string and its value is\n", index)
+                case Person:
+                        fmt.Printf("list[%d] is a Person and its value is\n", index)
+                default:
+                        fmt.Println("list[%d] is of a different type", index)
+                }
+        }
+
 }

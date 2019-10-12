@@ -21,4 +21,18 @@ func main() {
 	fmt.Printf("空指针是: %v\n", ip)
 	fmt.Printf("空指针的地址是: %v\n", &ip)
 	fmt.Printf("空指针的16进制是: %x\n", ip)
+
+	x, y := 1, 2
+	swap(&x, &y)
+	fmt.Println("x,y swap: ", x, y)
+	swap1(&x, &y)
+	fmt.Println("x,y swap1: ", x, y)
+}
+
+func swap(a, b *int) {
+	*a, *b = *b, *a
+}
+
+func swap1(a, b *int) {
+	a, b = b, a
 }

@@ -19,15 +19,15 @@ func fibonacci(n int, c chan int) {
 func main() {
 	c := make(chan int, 10)
 	go fibonacci(cap(c), c)
-	//for i := range c {
-	//	fmt.Println(i)
-	//}
-	for ; true; {
-		v, ok := <-c
-		if (!ok) {
-			break
-		}
-		fmt.Println(v)
+	for i := range c {
+		fmt.Println(i)
 	}
+	//for ; true; {
+	//	v, ok := <-c
+	//	if (!ok) {
+	//			break
+	//	}
+	//	fmt.Println(v)
+	//}
 
 }

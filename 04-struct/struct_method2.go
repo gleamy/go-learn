@@ -50,9 +50,9 @@ func (c Color) String() string {
 	return strings[c]
 }
 
-func (s string) addPrefix() string {
-	return "P:" + s
-}
+//func (s string) addPrefix() string {
+//	return "P:" + s
+//}
 
 func main() {
 	boxes := BoxList{
@@ -75,7 +75,7 @@ func main() {
 
 	fmt.Println("Obviously, now, the biggest one is", boxes.BiggestColor().String())
 
-	var s string = "abc"
+//	var s string = "abc"
 
 	//fmt.Println(s.addPrefix())
 

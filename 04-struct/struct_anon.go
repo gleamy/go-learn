@@ -20,6 +20,8 @@ type Student struct {
 
 func main() {
 	jane := Student{Human: Human{name: "jane", age: 12}, speciality: "Biology"}
+	// 初始化时不允许直接赋值
+	// j := Student {name: "jane", age:12, int: 1}	
 
 	fmt.Println("Her name is ", jane.name)
 	jane.name = "jane 1"
@@ -36,5 +38,6 @@ func main() {
 	// 修改匿名内置类型字段
 	jane.int = 3
 	fmt.Println("Her preferred number is", jane.int)
+	fmt.Printf("%v", jane.Human)	
 
 }

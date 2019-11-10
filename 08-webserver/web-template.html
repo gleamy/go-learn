@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title> page-list </title>
+</head>
+<body>
+	<ol>
+	{{range $.numList}}
+		<li><span style="color:red"> {{.|html}} </span></li>
+	{{end}}
+	</ol>
+</body>
+</html>
